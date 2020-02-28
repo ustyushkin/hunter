@@ -1,0 +1,9 @@
+{% extends "mainTemplate.twig" %}
+{% block content %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Почему я вижу эту страницу?</h4>
+        <p>{{ error }}</p>
+        <hr>
+        <p class="mb-0"><a href="#" onclick="history.go(-1)">Вернуться</a></p>
+    </div>
+{% endblock %}

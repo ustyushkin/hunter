@@ -1,0 +1,25 @@
+{
+    "name": "yustas/hunter",
+    "authors": [
+        {
+            "name": "ustyushkin",
+            "email": "ustyushkin.vyacheslav@gmail.com"
+        }
+    ],
+    "require": {
+        "php-activerecord/php-activerecord": "^1.2",
+        "twig/twig": "^3.0",
+        "mashape/unirest-php": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "system\\": "system",
+            "controller\\": "controller",
+            "model\\": "model",
+            "raw\\": "raw"
+        }
+    }
+}

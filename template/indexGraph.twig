@@ -1,0 +1,44 @@
+{% extends "mainTemplate.twig" %}
+{% block content %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">График</h1>
+            <p class="lead">График с распределением всех проектов по бюджету.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        window.onload = resize;
+        window.onresize = resize;
+
+        function resize () {
+            drawChart();
+        }
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                {% for project in projects %}
+                ['{{ project.text }}',{{ project.count }}]{% if loop.last == false  %},{% endif%}
+                {% endfor %}
+            ]);
+
+            var options = {
+                title: 'График с распределением всех проектов по бюджету',
+                width: '100%'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="piechart" style="height: 900px;"></div>
+{% endblock %}

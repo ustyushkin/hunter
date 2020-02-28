@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test work</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Test work</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/index/show/" data-toggle="tooltip" data-placement="bottom" title="Таблица открытых проектов в категориях Веб-программирование, PHP и Базы данных">Проекты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/index/statistics/" data-toggle="tooltip" data-placement="bottom" title="Таблица со статистикой всех открытых проектов по навыкам">Статистика</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/index/graph/" data-toggle="tooltip" data-placement="bottom" title="График с распределением всех проектов по бюджету">График</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ind/sh/dfg/dfdg/asd/?ert=4&dfe=567" data-toggle="tooltip" data-placement="bottom" title="Страница с ошибкой в адресе">Сообщение о ошибке</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="padding: 80px">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>

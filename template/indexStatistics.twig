@@ -1,0 +1,25 @@
+{% extends "mainTemplate.twig" %}
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Статистика</h1>
+            <p class="lead">Таблица со статистикой всех открытых проектов по навыкам.</p>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Навык</th>
+            <th scope="col">Количество открытых проектов</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for skill in skills %}
+            <tr>
+                <td>{{ skill.desc }}</td>
+                <td>{{ skill.count }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
